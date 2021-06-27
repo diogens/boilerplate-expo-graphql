@@ -1,21 +1,14 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { ApolloProvider } from '@apollo/client'
+import { apolloClient } from './apollo'
+
+import Router from './src/router'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>BoilerPlate :)</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ApolloProvider client={apolloClient}>
+      <Router />
+    </ApolloProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
