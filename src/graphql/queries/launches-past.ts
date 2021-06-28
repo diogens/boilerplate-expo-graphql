@@ -2,39 +2,29 @@ import { gql } from '@apollo/client'
 
 export const QUERY_LAUNCHES_PAST = gql`
   query QueryLaunchesPast {
-    launchesPast(limit: 10) {
+    launchesPast {
+      id
       mission_name
       launch_date_local
+      launch_date_utc
+      telemetry {
+        flight_club
+      }
+      launch_year
+      launch_success
       launch_site {
+        site_name
         site_name_long
       }
+      launch_date_unix
+      details
       links {
         article_link
         video_link
-      }
-      rocket {
-        rocket_name
-        first_stage {
-          cores {
-            flight
-            core {
-              reuse_count
-              status
-            }
-          }
-        }
-        second_stage {
-          payloads {
-            payload_type
-            payload_mass_kg
-            payload_mass_lbs
-          }
-        }
-      }
-      ships {
-        name
-        home_port
-        image
+        wikipedia
+        reddit_media
+        flickr_images
+        presskit
       }
     }
   }

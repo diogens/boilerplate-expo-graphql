@@ -29,5 +29,8 @@ const httpLink = new HttpLink({
 export const apolloClient = new ApolloClient<NormalizedCacheObject>({
   /* link: asyncAuthLink.concat(httpLink), */
   cache: new InMemoryCache(),
-  link: httpLink
+  link: httpLink,
+  onError: (e) => {
+    console.log(e)
+  }
 })
