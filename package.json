@@ -12,12 +12,6 @@
     "types:generate": "yarn schema:download && yarn schema:convert && yarn codegen",
     "test": "jest"
   },
-  "jest": {
-    "preset": "react-native",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ]
-  },
   "dependencies": {
     "@apollo/client": "^3.3.20",
     "apollo": "^2.33.4",

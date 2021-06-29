@@ -2,10 +2,10 @@ import React from 'react'
 import * as S from './styles'
 import { Text } from 'react-native'
 
-const Layout = () => (
+const Button = () => (
   <S.Wrapper>
-    <Text>Layoasdasdsadsadsadasdut</Text>
+    <Text>Button</Text>
   </S.Wrapper>
 )
 
-export default Layout
+export default Button

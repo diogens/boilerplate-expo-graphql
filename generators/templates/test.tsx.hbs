@@ -1,0 +1,16 @@
+import React from 'react'
+import { render, screen } from '@testing-library/react-native'
+
+import {{pascalCase name}} from '.'
+
+describe('<{{pascalCase name}} />', () => {
+  it('should render the heading', () => {
+    const { container, toJSON, getByText, debug } = render(<{{pascalCase name}} />)
+
+    debug()
+
+    expect(getByText('Button'))
+
+    expect(toJSON()).toMatchSnapshot()
+  })
+})
