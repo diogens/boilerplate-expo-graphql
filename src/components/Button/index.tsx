@@ -1,11 +1,16 @@
 import React from 'react'
 import * as S from './styles'
-import { Text } from 'react-native'
+import { Text, Button as Btn } from 'react-native'
 
-const Button = () => (
-  <S.Wrapper>
-    <Text>Button</Text>
-  </S.Wrapper>
+export type ButtonType = {
+  title: string
+  onpress: () => void
+}
+
+const Button = ({ title = 'Teste', onpress }: ButtonType) => (
+  <>
+    <Btn title={title} onPress={onpress} />
+  </>
 )
 
 export default Button

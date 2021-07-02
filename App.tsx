@@ -1,14 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
 import { ApolloProvider } from '@apollo/client'
 import { apolloClient } from './apollo'
+import StorybookUI from './storybook'
+import { LOAD_STORYBOOK } from '@env'
 
 import Router from './src/router'
 
-export default function App() {
+const App = () => {
   return (
     <ApolloProvider client={apolloClient}>
       <Router />
     </ApolloProvider>
   )
 }
+
+export default LOAD_STORYBOOK === 'true' ? StorybookUI : App

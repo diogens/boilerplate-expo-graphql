@@ -1,0 +1,25 @@
+import React from 'react'
+import { action } from '@storybook/addon-actions'
+import { storiesOf } from '@storybook/react-native'
+import { SafeAreaView, View, Text } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
+
+import {{pascalCase name}} from '.'
+
+export default {
+  title: 'Button',
+  component: {{pascalCase name}}
+}
+
+export const Default = () => (
+  <SafeAreaView>
+    <StatusBar style="dark" />
+    <{{pascalCase name}}/>
+  </SafeAreaView>
+)
+
+
+
+// On-Device Register
+storiesOf('{{pascalCase name}}', module)
+  .add('{{pascalCase name}}', Default)

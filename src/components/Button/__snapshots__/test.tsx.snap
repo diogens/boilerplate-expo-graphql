@@ -2,14 +2,44 @@
 
 exports[`<Button /> should render the heading 1`] = `
 <View
+  accessibilityRole="button"
+  accessibilityState={Object {}}
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {},
-    ]
+    Object {
+      "opacity": 1,
+    }
   }
 >
-  <Text>
-    Button
-  </Text>
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#007AFF",
+            "fontSize": 18,
+            "margin": 8,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Button
+    </Text>
+  </View>
 </View>
 `;

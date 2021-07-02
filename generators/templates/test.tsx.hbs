@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react-native'
+import { render } from '@testing-library/react-native'
 
 import {{pascalCase name}} from '.'
 
@@ -9,7 +9,7 @@ describe('<{{pascalCase name}} />', () => {
 
     debug()
 
-    expect(getByText('Button'))
+    expect(getByText('{{pascalCase name}}'))
 
     expect(toJSON()).toMatchSnapshot()
   })
