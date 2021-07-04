@@ -1,5 +1,8 @@
 module.exports = {
   testPathIgnorePatterns: ['/node_modules/'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)'
+  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.ts',
@@ -12,19 +15,7 @@ module.exports = {
     '!src/routers/**/*.ts',
     '!src/graphql/**/*.ts'
   ],
-  preset: 'react-native',
+  preset: 'jest-expo',
   setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest']
-  /* moduleNameMapper: {
-    '^styled-components':
-      '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
-  } */
 }
-
-/* setupFilesAfterEnv: ['<rootDir>/.jest/setup.js'], */
-/* "jest": {
-  "preset": "react-native",
-  "setupFilesAfterEnv": [
-    "@testing-library/jest-native/extend-expect"
-  ]
-}, */

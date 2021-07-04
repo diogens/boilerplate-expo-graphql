@@ -12,7 +12,5 @@ describe('<Button />', () => {
     debug()
 
     expect(getByText('Button'))
-
-    expect(toJSON()).toMatchSnapshot()
   })
 })

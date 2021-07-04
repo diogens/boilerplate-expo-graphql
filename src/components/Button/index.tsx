@@ -8,9 +8,9 @@ export type ButtonType = {
 }
 
 const Button = ({ title = 'Teste', onpress }: ButtonType) => (
-  <>
+  <S.Wrapper>
     <Btn title={title} onPress={onpress} />
-  </>
+  </S.Wrapper>
 )
 
 export default Button

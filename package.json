@@ -18,7 +18,9 @@
   },
   "config": {
     "react-native-storybook-loader": {
-      "searchDir": ["./src/components"],
+      "searchDir": [
+        "./src/components"
+      ],
       "pattern": "**/*.stories.tsx",
       "outputFile": "./storybook/storyLoader.js"
     }
@@ -57,6 +59,8 @@
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.11",
     "@types/react-native": "^0.64.10",
+    "@types/styled-components": "^5.1.11",
+    "@types/styled-components-react-native": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "babel-loader": "^8.2.2",
